@@ -23,7 +23,7 @@ require 'config.php';
 
 */
 
-			$arrayName = array('victory', 'ben', 'loveth', 'kebt', 'queen', 'valentine', 'keneth');
+			$arrayName = array('victory', 'ben', 'loveth', 'kebt', 'queen');
 
 
 			if(isset($_POST['user_name'])){
