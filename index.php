@@ -34,6 +34,10 @@
 </head>
 <body>
 
+	<br/><br/>
+
+	<div class="container">
+
 	<div id='comments'>
 <?php  
 $qry = "SELECT * FROM `users_table` LIMIT 2";
@@ -55,6 +59,8 @@ endif;
 	</div> <br/>
 
 	<button class="btn btn-primary" id="more_comments">More Comment</button>
+
+</div>
 
 
 </body>
