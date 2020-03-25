@@ -1,3 +1,4 @@
+<?php include 'config.php';?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,20 +44,10 @@
 
 <body>
 
-	<?php
-
-	define("Host", "localhost");
-	define("password", "");
-	define("user", "root");
-	define("database", "ajax");
-
-	$database_connection = mysqli_connect(Host, user, password, database);
-	
-
-	?>
 
 
-
+<br/><br/>
+<div class="container">
 
 <div class="commentDiv">
 
@@ -66,7 +57,7 @@
 
 $query = "SELECT * FROM `users_table` LIMIT 2";
 
-$query_result = mysqli_query($database_connection, $query);
+$query_result = mysqli_query($connection, $query);
 
 if(mysqli_num_rows($query_result)>0){
 	while($row = mysqli_fetch_assoc($query_result)){
@@ -80,7 +71,9 @@ if(mysqli_num_rows($query_result)>0){
 
 
 	?>
-	</div><br/><br/>
+	</div> 
+
+	<br/><br/>
 
 	<button class="btn btn-primary" id="moreComment">ADD MORE COMMENTS</button>
 <br/><br/>
@@ -88,6 +81,8 @@ if(mysqli_num_rows($query_result)>0){
 <input type="text" name="text_field" id="textField"><br/>
 
 <span class="display_result"></span>
+
+</div>
 
 
 </body>

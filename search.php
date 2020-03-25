@@ -1,3 +1,5 @@
+<?php include 'config.php';?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,17 +11,7 @@
 </head>
 <body>
 
-	<?php
-
-	define("Host", "localhost");
-	define("password", "");
-	define("user", "root");
-	define("database", "ajax");
-
-	$database_connection = mysqli_connect(Host, user, password, database);
 	
-
-	?>
 
 
 	<?php
@@ -30,7 +22,7 @@ if(isset($_POST['input_variable']) && !empty($_POST['input_variable'])){
 
 $query = "SELECT *  FROM `users_table`  where `author` like '$author%'";
 
-$result = mysqli_query($database_connection, $query);
+$result = mysqli_query($connection, $query);
 
 if(mysqli_num_rows($result)>0){
 
